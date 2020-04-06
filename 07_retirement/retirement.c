@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct _retire_info
-{
+struct _retire_info {
   int months;
   double contribution;
   double rate_of_return;
@@ -29,7 +28,7 @@ void retirement (int starAge, double initial, retire_info working, retire_info r
     }
 }
 
-int main(void)
+int main()
 {
   retire_info working;
   retire_info retired;
