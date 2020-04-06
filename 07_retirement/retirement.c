@@ -29,7 +29,7 @@ void retirement (int starAge, double initial, retire_info working, retire_info r
     }
 }
 
-int main()
+int main(void)
 {
   retire_info working;
   retire_info retired;
