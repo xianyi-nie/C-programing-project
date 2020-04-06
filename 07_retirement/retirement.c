@@ -43,6 +43,6 @@ int main(void)
   retired.rate_of_return = 0.01/12;
   
   retirement (327, 21345, working, retired);
-    return 0;
+  return EXIT_SUCCESS;
 }
 
