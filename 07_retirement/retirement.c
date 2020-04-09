@@ -12,17 +12,13 @@ void retirement (int starAge, double initial, retire_info working, retire_info r
 {
   for (int i = 0; i < working.months; i++)
     {
-      int workingAge = starAge / 12;
-      int workingmonth = starAge % 12;
-      printf ("Age %3d month %2d you have $%.2f\n", workingAge, workingmonth, initial);
+      printf ("Age %3d month %2d you have $%.2lf\n", starAge / 12, starAge % 12, initial);
       initial = initial * working.rate_of_return + initial + working.contribution;
       starAge = starAge + 1;
     }
   for (int j = 0; j < retired.months; j++)
     {   
-      int retiredAge = starAge / 12;
-      int retiredmonth = starAge % 12;
-      printf ("Age %3d month %2d you have $%.2f\n", retiredAge, retiredmonth, initial);
+      printf ("Age %3d month %2d you have $%.2lf\n", starAge / 12, starAge % 12, initial);
       initial = initial * retired.rate_of_return + initial + retired.contribution;
       starAge = starAge +1;
     }
