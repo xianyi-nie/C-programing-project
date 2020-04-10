@@ -8,19 +8,19 @@ struct _retire_info {
 };
 typedef struct _retire_info retire_info;
 
-void retirement (int starAge, double initial, retire_info working, retire_info retired)
+void retirement (int startAge, double initial, retire_info working, retire_info retired)
 {
   for (int i = 0; i < working.months; i++)
     {
-      printf ("Age %3d month %2d you have $%.2lf\n", starAge / 12, starAge % 12, initial);
+      printf ("Age %3d month %2d you have $%.2lf\n", startAge / 12, startAge % 12, initial);
       initial = initial * working.rate_of_return + initial + working.contribution;
-      starAge = starAge + 1;
+      startAge = startAge + 1;
     }
   for (int j = 0; j < retired.months; j++)
     {   
-      printf ("Age %3d month %2d you have $%.2lf\n", starAge / 12, starAge % 12, initial);
+      printf ("Age %3d month %2d you have $%.2lf\n", startAge / 12, startAge % 12, initial);
       initial = initial * retired.rate_of_return + initial + retired.contribution;
-      starAge = starAge +1;
+      startAge = startAge +1;
     }
 }
 
