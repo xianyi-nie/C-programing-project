@@ -91,7 +91,7 @@ card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
   temp.value = value_let;
   temp.suit = suit_let;
-  assert(temp.value >=2 && temp.value <=14);
+  assert(temp.value >=2 && temp.value <= VALUE_ACE);
   assert(temp.suit >=0 && temp.suit <=3);
   return temp;
 }
