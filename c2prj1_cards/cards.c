@@ -89,7 +89,7 @@ void print_card(card_t c) {
 
 card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
-  if ( value_let >= '2' $$ value_let <= '9')
+  if ((value_let >= '2') && (value_let <= '9'))
     {
       temp.value = value_let - '0';
     }
