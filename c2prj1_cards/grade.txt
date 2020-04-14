@@ -1,9 +1,49 @@
-Grading at Tue Apr 14 19:28:01 UTC 2020
+Grading at Tue Apr 14 19:30:15 UTC 2020
 Compiling cards.c
-cards.c: In function ‘card_from_letters’:
-cards.c:92:25: error: expected ‘)’ before ‘$$’
-   if ( value_let >= '2' $$ value_let <= '9')
-                         ^
-Could not compile your card.c!
+Testing card_from_letters
+For card_from_letters('0','c'), I expected 0c but got Ac
+For card_from_letters('0','d'), I expected 0d but got Ac
+For card_from_letters('0','h'), I expected 0h but got Ac
+For card_from_letters('0','s'), I expected 0s but got Ac
+For card_from_letters('2','d'), I expected 2d but got 2c
+For card_from_letters('2','h'), I expected 2h but got 2c
+For card_from_letters('2','s'), I expected 2s but got 2c
+For card_from_letters('3','d'), I expected 3d but got 3c
+For card_from_letters('3','h'), I expected 3h but got 3c
+For card_from_letters('3','s'), I expected 3s but got 3c
+For card_from_letters('4','d'), I expected 4d but got 4c
+For card_from_letters('4','h'), I expected 4h but got 4c
+For card_from_letters('4','s'), I expected 4s but got 4c
+For card_from_letters('5','d'), I expected 5d but got 5c
+For card_from_letters('5','h'), I expected 5h but got 5c
+For card_from_letters('5','s'), I expected 5s but got 5c
+For card_from_letters('6','d'), I expected 6d but got 6c
+For card_from_letters('6','h'), I expected 6h but got 6c
+For card_from_letters('6','s'), I expected 6s but got 6c
+For card_from_letters('7','d'), I expected 7d but got 7c
+For card_from_letters('7','h'), I expected 7h but got 7c
+For card_from_letters('7','s'), I expected 7s but got 7c
+For card_from_letters('8','d'), I expected 8d but got 8c
+For card_from_letters('8','h'), I expected 8h but got 8c
+For card_from_letters('8','s'), I expected 8s but got 8c
+For card_from_letters('9','d'), I expected 9d but got 9c
+For card_from_letters('9','h'), I expected 9h but got 9c
+For card_from_letters('9','s'), I expected 9s but got 9c
+For card_from_letters('A','d'), I expected Ad but got Ac
+For card_from_letters('A','h'), I expected Ah but got Ac
+For card_from_letters('A','s'), I expected As but got Ac
+For card_from_letters('J','c'), I expected Jc but got Ac
+For card_from_letters('J','d'), I expected Jd but got Ac
+For card_from_letters('J','h'), I expected Jh but got Ac
+For card_from_letters('J','s'), I expected Js but got Ac
+For card_from_letters('K','c'), I expected Kc but got Ac
+For card_from_letters('K','d'), I expected Kd but got Ac
+For card_from_letters('K','h'), I expected Kh but got Ac
+For card_from_letters('K','s'), I expected Ks but got Ac
+For card_from_letters('Q','c'), I expected Qc but got Ac
+For card_from_letters('Q','d'), I expected Qd but got Ac
+For card_from_letters('Q','h'), I expected Qh but got Ac
+For card_from_letters('Q','s'), I expected Qs but got Ac
+Failed
 
 Overall Grade: FAILED
