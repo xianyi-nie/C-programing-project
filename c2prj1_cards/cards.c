@@ -5,7 +5,7 @@
 
 
 void assert_card_valid(card_t c) {
-  assert(c.value>=2 && c.value<=14);
+  assert(c.value>=2 && c.value<=VALUE_ACE);
   assert(c.suit>=SPADES && c.suit<=CLUBS);
 }
 
@@ -30,78 +30,54 @@ const char * ranking_to_string(hand_ranking_t r) {
       return "PAIR";
     case NOTHING:
       return "NOTHING";
+    default :
+      break;
     }
   return "";
 }
 
 char value_letter(card_t c) {
-  char x;
+  if ((c.value >= 2) && (c.value <=9))
+    {
+      return c.value + '0';
+    }
+  else
+    {
   switch (c.value)
     {
-    case 2:
-      x = '2';
-      break;
-    case 3:
-      x = '3';
-      break;
-    case 4:
-      x = '4';
-      break;
-    case 5:
-      x = '5';           
-      break;
-    case 6:
-      x = '6';           
-      break;
-    case 7:
-      x = '7';           
-      break;
-    case 8:
-      x = '8';           
-      break;
-    case 9:
-      x = '9';           
-      break;
     case 10:
-      x = '0';           
+      return '0';           
+    case VALUE_JACK:
+      return 'J';           
+    case VALUE_QUEEN:
+      return 'Q';           
+    case VALUE_KING:
+      return 'K';                
+    case VALUE_ACE:
+      return 'A';
+    default:
       break;
-    case 11:
-      x = 'J';           
-      break;
-    case 12:
-      x = 'Q';           
-      break;
-    case 13:
-      x = 'K';           
-      break;
-    case 14:
-      x = 'A';
-      break;	  
     }
-  return x;
+    }
+  return c.value;
 }
 
 
 char suit_letter(card_t c) {
-  char x;
   switch (c.suit)
     {
     case SPADES:
-      x = 's';
-      break;
+      return 's';
     case HEARTS:
-      x = 'h';
-      break;
+      return 'h';
     case DIAMONDS:
-      x = 'd';
-      break;
+      return 'd';
     case CLUBS:
-      x = 'c';
-      break;
-    case NUM_SUITS:
+      return 'c';
+    default:
       break;
     }
-  return x;
+  return c.suit;
 }
 
 void print_card(card_t c) {
