@@ -1,6 +1,9 @@
-Grading at Tue Apr 14 18:55:55 UTC 2020
+Grading at Tue Apr 14 19:28:01 UTC 2020
 Compiling cards.c
-Testing card_from_letters
-Failed
+cards.c: In function ‘card_from_letters’:
+cards.c:92:25: error: expected ‘)’ before ‘$$’
+   if ( value_let >= '2' $$ value_let <= '9')
+                         ^
+Could not compile your card.c!
 
 Overall Grade: FAILED
